@@ -263,6 +263,16 @@ body{
   transform:scale(1.2);
   color:#22c55e;
 }
+.email-link{
+  color:#cbd5e1;
+  text-decoration:none;
+}
+
+.email-link:hover{
+  color:#22d3ee;
+  text-decoration:underline;
+}
+
 
 /* ================= RESPONSIVE ================= */
 @media(max-width:768px){
