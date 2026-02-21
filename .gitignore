@@ -27,9 +27,12 @@ wheels/
 instance/
 .webassets-cache
 
-# Environment
+# Environment - IMPORTANT: Never commit these!
 .env
 .venv
+*.env
+.env.local
+.env.production
 
 # IDE
 .vscode/
@@ -41,3 +44,11 @@ instance/
 # OS
 .DS_Store
 Thumbs.db
+
+# Logs
+*.log
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
