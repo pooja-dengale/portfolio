@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frontend Developer & ML Enthusiast Portfolio - Showcasing modern web development and machine learning projects">
+  <meta name="keywords" content="Frontend Developer, Machine Learning, Python, JavaScript, Portfolio">
+  <title>Pooja Dengale | Frontend Developer & ML Enthusiast</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-bracket">&lt;</span>
+        
+        <span class="logo-bracket">/&gt;</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Pooja Dengale</h1>
+          <h2 class="hero-title">
+            <span class="typing-text"></span>
+            <span class="cursor">|</span>
+          </h2>
+          <p class="hero-description">
+            
+          </p>Python Developer specializing in backend systems and automation. Future AI & ML engineer dedicated to building intelligent, efficient, and scalable software solutions.
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+              <span>Get In Touch</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="{{ url_for('download_cv') }}" class="btn btn-secondary">
+              <span>Download CV</span>
+              <i class="fas fa-download"></i>
+            </a>
+          </div>
+          <div class="hero-social">
+            <a href="https://github.com/pooja-dengale" target="_blank" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" class="social-link">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:dengalepooja8@gmail.com" class="social-link">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-wrapper">
+            <div class="glow-effect"></div>
+            <img src="{{ url_for('static', filename='images/ME.png') }}" alt="Pooja Dengale" class="profile-img">
+            <div class="floating-card card-1">
+              <i class="fas fa-code"></i>
+              <span>Frontend Dev</span>
+            </div>
+            <div class="floating-card card-2">
+              <i class="fas fa-brain"></i>
+              <span>ML Enthusiast</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <p>Scroll Down</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get To Know</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-cards">
+          <div class="glass-card">
+            <div class="card-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Frontend Development</h3>
+            <p>Building responsive and interactive user interfaces with modern web technologies</p>
+          </div>
+          <div class="glass-card">
+            <div class="card-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>Machine Learning</h3>
+            <p>Exploring AI/ML algorithms and data-driven solutions for real-world problems</p>
+          </div>
+          <div class="glass-card">
+            <div class="card-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Data Science</h3>
+            <p>Analyzing and visualizing data to extract meaningful insights and patterns</p>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>
+            I'm a passionate <strong>Frontend Developer</strong> and <strong>Machine Learning Enthusiast</strong> 
+            with a strong foundation in creating beautiful, functional web experiences. My journey combines 
+            the art of frontend development with the science of artificial intelligence.
+          </p>
+          <p>
+            With expertise in <strong>Python, Django, JavaScript</strong>, and modern web technologies, 
+            I build scalable applications that merge elegant design with intelligent functionality. 
+            I'm constantly exploring the intersection of web development and AI/ML to create innovative solutions.
+          </p>
+          <p>
+            Currently focused on expanding my skills in <strong>AI/ML fundamentals</strong>, data analysis, 
+            and building production-ready applications that solve real problems. I believe in writing clean code, 
+            continuous learning, and creating digital experiences that make a difference.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <h4>10+</h4>
+              <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+              <h4>5+</h4>
+              <p>Technologies</p>
+            </div>
+            <div class="stat-item">
+              <h4>1+</h4>
+              <p>Years Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">My Skills</h2>
+      </div>
+      <div class="skills-content">
+        <div class="skill-category">
+          <h3 class="category-title">
+            <i class="fas fa-code"></i>
+            Frontend Development
+          </h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>HTML5 & CSS3</span>
+              <span class="skill-percentage">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="90"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>JavaScript (ES6+)</span>
+              <span class="skill-percentage">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="85"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Responsive Design</span>
+              <span class="skill-percentage">95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="95"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title">
+            <i class="fas fa-server"></i>
+            Backend & Frameworks
+          </h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Python</span>
+              <span class="skill-percentage">88%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="88"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Django</span>
+              <span class="skill-percentage">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="80"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Flask</span>
+              <span class="skill-percentage">70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="70"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title">
+            <i class="fas fa-brain"></i>
+            AI/ML & Data Science
+          </h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>NumPy & Pandas</span>
+              <span class="skill-percentage">82%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="82"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Machine Learning</span>
+              <span class="skill-percentage">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="75"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Data Analysis</span>
+              <span class="skill-percentage">78%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="78"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title">
+            <i class="fas fa-tools"></i>
+            Tools & Others
+          </h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Git & GitHub</span>
+              <span class="skill-percentage">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="85"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>SQL Databases</span>
+              <span class="skill-percentage">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="80"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>RESTful APIs</span>
+              <span class="skill-percentage">83%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="83"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Work</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://github.com/pooja-dengale" class="project-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Django</span>
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+            </div>
+            <h3>E-Commerce Platform</h3>
+            <p>Full-featured online store with user authentication, product management, shopping cart, and payment integration.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://github.com/pooja-dengale" class="project-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">ML</span>
+              <span class="tag">Python</span>
+              <span class="tag">NLP</span>
+            </div>
+            <h3>AI Chatbot Assistant</h3>
+            <p>Intelligent chatbot using natural language processing to provide automated customer support and responses.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://github.com/pooja-dengale" class="project-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">CSS</span>
+              <span class="tag">API</span>
+            </div>
+            <h3>Analytics Dashboard</h3>
+            <p>Interactive admin dashboard with real-time data visualization, charts, and comprehensive analytics features.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://github.com/pooja-dengale" class="project-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">ML</span>
+            </div>
+            <h3>Data Analysis Tool</h3>
+            <p>Python-based tool for data cleaning, analysis, and visualization with machine learning predictions.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://github.com/pooja-dengale" class="project-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JS</span>
+            </div>
+            <h3>Portfolio Website</h3>
+            <p>Modern, responsive portfolio with smooth animations, glassmorphism design, and interactive elements.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://pooja-dengale.github.io/portfolio/" class="project-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Flask</span>
+              <span class="tag">API</span>
+              <span class="tag">REST</span>
+            </div>
+            <h3>RESTful API Service</h3>
+            <p>Scalable REST API built with Flask, featuring authentication, rate limiting, and comprehensive documentation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">Experience & Education</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024 - Present</span>
+            <h3>Frontend Developer Intern</h3>
+            <h4>ZyraTech</h4>
+            <p>Developed responsive web interfaces, collaborated with design team, implemented modern UI/UX patterns, and optimized application performance.</p>
+            <div class="timeline-tags">
+              <span>HTML/CSS</span>
+              <span>JavaScript</span>
+              <span>UI/UX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2023 - 2024</span>
+            <h3>Python Developer Certification</h3>
+            <h4>Professional Training</h4>
+            <p>Completed comprehensive Python development course covering Django, Flask, data structures, algorithms, and best practices.</p>
+            <div class="timeline-tags">
+              <span>Python</span>
+              <span>Django</span>
+              <span>Flask</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2021 - 2024</span>
+            <h3>B.Voc Software Development</h3>
+            <h4>University Education</h4>
+            <p>Specialized in software development with focus on web technologies, database management, and software engineering principles.</p>
+            <div class="timeline-tags">
+              <span>Software Dev</span>
+              <span>Web Tech</span>
+              <span>Databases</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2023 - Present</span>
+            <h3>Machine Learning Journey</h3>
+            <h4>Self-Learning & Projects</h4>
+            <p>Exploring AI/ML fundamentals, working with NumPy, Pandas, and building data-driven projects to solve real-world problems.</p>
+            <div class="timeline-tags">
+              <span>ML</span>
+              <span>Data Science</span>
+              <span>AI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Let's work together!</h3>
+          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:dengalepooja8@gmail.com">dengalepooja8@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4>Location</h4>
+                <p>India</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div>
+                <h4>Status</h4>
+                <p>Available for opportunities</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <a href="https://github.com/pooja-dengale" target="_blank" class="social-btn">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" class="social-btn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:dengalepooja8@gmail.com" class="social-btn">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject" required>
+            <i class="fas fa-tag"></i>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <i class="fas fa-comment"></i>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <div id="formMessage" style="margin-top: 15px; text-align: center;"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Pooja Dengale. Crafted with <i class="fas fa-heart"></i> and code.</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
