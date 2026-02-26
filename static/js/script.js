@@ -2,10 +2,10 @@
 const typingText = document.querySelector('.typing-text');
 const phrases = [
   'Frontend Developer',
-  'ML Enthusiast',
-  'Python Developer',
-  'Problem Solver',
-  'Creative Coder'
+  'Exploring Backend',
+  'Learning Machine Learning',
+  'Building Web Apps',
+  'Problem Solver'
 ];
 
 let phraseIndex = 0;
