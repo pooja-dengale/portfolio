@@ -36,27 +36,27 @@ def contact():
         if '@' not in email or '.' not in email:
             return jsonify({'success': False, 'message': 'Invalid email address'}), 400
         
-        # Check if mail is configured
-        if not app.config['MAIL_USERNAME'] or not app.config['MAIL_PASSWORD']:
-            # Fallback: log to console in development
-            print(f"\n{'='*50}")
-            print("NEW CONTACT FORM SUBMISSION")
-            print(f"{'='*50}")
-            print(f"Name: {name}")
-            print(f"Email: {email}")
-            print(f"Subject: {subject}")
-            print(f"Message:\n{message}")
-            print(f"{'='*50}\n")
-            return jsonify({'success': True, 'message': 'Message received (email not configured)'})
+        # Log message to console (works without email config)
+        print(f"\n{'='*60}")
+        print("📧 NEW CONTACT FORM SUBMISSION")
+        print(f"{'='*60}")
+        print(f"👤 Name: {name}")
+        print(f"📧 Email: {email}")
+        print(f"📌 Subject: {subject}")
+        print(f"💬 Message:\n{message}")
+        print(f"{'='*60}\n")
         
-        # Create email message
-        msg = Message(
-            subject=f"Portfolio Contact: {subject}",
-            sender=app.config['MAIL_USERNAME'],
-            recipients=['dengalepooja8@gmail.com'],
-            reply_to=email
-        )
-        msg.body = f"""
+        # Check if mail is configured
+        if app.config['MAIL_USERNAME'] and app.config['MAIL_PASSWORD'] and app.config['MAIL_PASSWORD'] != 'your-16-char-app-password-here':
+            try:
+                # Create email message
+                msg = Message(
+                    subject=f"Portfolio Contact: {subject}",
+                    sender=app.config['MAIL_USERNAME'],
+                    recipients=['dengalepooja8@gmail.com'],
+                    reply_to=email
+                )
+                msg.body = f"""
 New contact form submission from your portfolio:
 
 Name: {name}
@@ -68,15 +68,20 @@ Message:
 
 ---
 This message was sent from your portfolio contact form.
-        """
-        
-        # Send email
-        mail.send(msg)
-        
-        return jsonify({'success': True, 'message': 'Message sent successfully!'})
+                """
+                
+                # Send email
+                mail.send(msg)
+                return jsonify({'success': True, 'message': 'Message sent successfully via email!'})
+            except Exception as e:
+                print(f"⚠️ Email sending failed: {str(e)}")
+                return jsonify({'success': True, 'message': 'Message received! (Email not configured, check console logs)'})
+        else:
+            # Email not configured - still return success
+            return jsonify({'success': True, 'message': 'Message received! Check the console for details.'})
     
     except Exception as e:
-        print(f"Error sending email: {str(e)}")
+        print(f"❌ Error processing contact form: {str(e)}")
         return jsonify({'success': False, 'message': 'Failed to send message. Please try again later.'}), 500
 
 @app.route('/download-cv')
