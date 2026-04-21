@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-// Base URL: empty string uses Vite proxy in dev, or set VITE_API_URL in .env for production
+// In dev: Vite proxy forwards /contact to Flask (localhost:5000)
+// In production (Netlify): /contact is redirected to /.netlify/functions/contact via netlify.toml
 const API_BASE = import.meta.env.VITE_API_URL || ''
 
 /**
